@@ -1,12 +1,14 @@
-#leap year or not
+##Write a function called linear_search_product that takes the list of products and a target product name as input. The function should perform a linear search to find the target product in the list and return a list of indices of all occurrences of the product if found, or an empty list the product is not found.##
 
-def isLeapYear(year):
- if(year%4==0and year%10!=0)or year%400==0:
-     return True
- else:
-     return False
-year=2024
-if isLeapYear(year):
-  print('{}is a leap year.'.format(year))
-else:
-  print('{} is not a leap year.'.format(year))
+def linearSearchProduct(productList, targetProduct): 
+  indices = []
+  for index, product in enumerate(productList):
+   if product==targetProduct:      
+     indices.append(index)   
+  return indices
+products=["shoes","boot","loafer","sh oes","sandal","shoes"]
+target = "shoes"
+target2 = "apple"
+result =linearSearchProduct(products,
+target)
+print(result)
